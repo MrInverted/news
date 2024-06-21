@@ -112,7 +112,11 @@
   bottom: 0;
   z-index: 10;
 
-  width: 350px;
+  width: 400px;
+
+  @media (max-width: $mini) {
+    width: 100%;
+  }
 
   transform: translateX(-100%);
   transition: 0.5s;
