@@ -1,0 +1,100 @@
+.footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 60px 0;
+
+  font-size: 16px;
+  color: gray;
+
+  &__content {}
+
+  &__row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 60px;
+
+    @media (max-width: $medium) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: $mini) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__left {
+    span {
+      display: block;
+      font-size: 50px;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    @media (max-width: $mini) {
+      text-align: center;
+    }
+  }
+
+  &__center {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: justify;
+
+    max-width: 800px;
+
+    @media (max-width: $medium) {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+
+    @media (max-width: $mini) {
+      grid-row: 3;
+      grid-column: unset;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+
+    @media (max-width: $medium) {
+      text-align: right;
+    }
+
+    @media (max-width: $mini) {
+      gap: 10px;
+      text-align: center;
+    }
+
+    a[href^="tel"] {
+      font-size: 20px;
+      font-weight: 700;
+      color: black;
+    }
+
+    a[href^="mailto"] {
+      font-size: 16px;
+      color: black;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @media (max-width: $medium) {
+        justify-content: flex-end;
+      }
+
+      @media (max-width: $mini) {
+        justify-content: center;
+      }
+    }
+  }
+}
