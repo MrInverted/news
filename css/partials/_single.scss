@@ -25,20 +25,25 @@
       margin-bottom: 20px;
     }
 
-    q {
+    q,
+    blockquote {
       margin: 20px 0;
       display: block;
-      padding-left: 60px;
       font-style: italic;
       line-height: 1.5;
       color: gray;
 
+      padding-left: 60px;
       padding-top: 40px;
       padding-bottom: 40px;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
 
       position: relative;
+
+      @media (max-width: $mini) {
+        padding-left: 0;
+      }
 
       &::before {
         content: "”";
@@ -48,6 +53,15 @@
         top: 50%;
         left: 10px;
         transform: translateY(-50%);
+
+        @media (max-width: $mini) {
+          display: block;
+          position: static;
+          transform: unset;
+
+          line-height: 1;
+          margin-bottom: -30px;
+        }
       }
     }
   }

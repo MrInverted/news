@@ -599,26 +599,44 @@ h3 {
   width: 100%;
   margin-bottom: 20px;
 }
-.single__post q {
+.single__post q,
+.single__post blockquote {
   margin: 20px 0;
   display: block;
-  padding-left: 60px;
   font-style: italic;
   line-height: 1.5;
   color: gray;
+  padding-left: 60px;
   padding-top: 40px;
   padding-bottom: 40px;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   position: relative;
 }
-.single__post q::before {
+@media (max-width: 600px) {
+  .single__post q,
+  .single__post blockquote {
+    padding-left: 0;
+  }
+}
+.single__post q::before,
+.single__post blockquote::before {
   content: "”";
   font-size: 80px;
   position: absolute;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
+}
+@media (max-width: 600px) {
+  .single__post q::before,
+  .single__post blockquote::before {
+    display: block;
+    position: static;
+    transform: unset;
+    line-height: 1;
+    margin-bottom: -30px;
+  }
 }
 .single__news {
   padding: 20px;
