@@ -34,6 +34,7 @@
     @media (max-width: $medium) {
       width: 100%;
       justify-content: space-between;
+      flex-direction: row-reverse;
     }
 
     i {
@@ -187,6 +188,18 @@
     gap: 20px;
 
     font-size: 24px;
+
+    @media (max-width: $max) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $medium) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $mini) {
+      font-size: 18px;
+    }
   }
 
   &__links {
@@ -198,5 +211,14 @@
     font-size: 30px;
 
     margin-top: auto;
+  }
+
+  &__align {
+    display: flex;
+    justify-content: flex-start;
+
+    @media (max-width: $mini) {
+      justify-content: flex-end;
+    }
   }
 }

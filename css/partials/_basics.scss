@@ -57,6 +57,8 @@ my-container {
 
   margin-top: 40px;
 
+  color: var(--cyan);
+
   &:hover {
     text-decoration: underline;
     text-underline-offset: 5px;
@@ -76,6 +78,22 @@ section {
 
   @media (max-width: $medium) {
     padding: 40px 0;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+
+  @media (max-width: $max) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mini) {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 
