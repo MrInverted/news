@@ -5,10 +5,12 @@ class Popup {
 
   open() {
     this.popup.classList.add("opened");
+    document.body.style.overflow = "hidden";
   }
 
   close() {
     this.popup.classList.remove("opened");
+    document.body.style.overflow = "";
   }
 }
 
