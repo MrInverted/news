@@ -599,6 +599,10 @@ h3 {
   width: 100%;
   margin-bottom: 20px;
 }
+.single__post time {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+}
 .single__post q,
 .single__post blockquote {
   margin: 20px 0;
@@ -713,15 +717,16 @@ h3 {
   align-items: center;
   gap: 10px;
 }
-.single__tag {
+.single__tags a {
   display: inline-block;
   padding: 10px 15px;
   border-radius: 10px;
   background-color: var(--cyan);
   color: white;
   margin-top: 40px;
+  margin-bottom: 20px;
 }
-.single__tag:hover {
+.single__tags a:hover {
   opacity: 0.6;
 }
 
